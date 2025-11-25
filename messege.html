@@ -6,13 +6,11 @@
     <title>A Special Messenger for You</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
 </head>
 <body>
     <div class="container">
-        
         <div class="welcome-message">
-            <h1 style="color: #6a1b9a;">HI HIMU🤍</h1>
+            <h1 style="color: #6a1b9a;">Welcome Messenger!</h1>
             <p style="color: #4a148c;">
                 I hope you are doing well. I have been eagerly waiting for you. Thank you for making your way here! I have prepared a few messages just for you.
             </p>
@@ -22,12 +20,12 @@
             <h2 style="color: #880e4f;">💌 Your Letters Await!</h2>
             
             <div class="letter-item">
-                <span class="click-instruction">Letter for you.Please click on the letter icon to open it</span>
+                <span class="click-instruction">Letter 1: A Special Note</span>
                 <i class="fas fa-envelope-open-text icon-btn" onclick="showMessage(this, 'content1')"></i> 
                 <span class="status-note status-ready">Uploaded on November 25. Ready to read!</span>
                 
                 <div id="content1" class="hidden-content">
-                    <h3 style="color: #00796b;">Letter 1: All i want to say</h3>
+                    <h3 style="color: #00796b;">Letter 1: A Special Note</h3>
                     
                     <p class="message-text">
                         **Dear Himu,**
@@ -44,12 +42,12 @@
             </div>
             
             <div class="letter-item">
-                <span class="click-instruction">Letter 2</span>
+                <span class="click-instruction">Letter 2: Thoughts of the Day</span>
                 <i class="fas fa-envelope-open-text icon-btn" onclick="showMessage(this, 'content2')"></i>
                 <span class="status-note status-ready">Uploaded on November 25. Ready to read!</span>
 
                 <div id="content2" class="hidden-content">
-                    <h3 style="color: #00796b;">Letter 2:</h3>
+                    <h3 style="color: #00796b;">Letter 2: Thoughts of the Day</h3>
                     <p class="message-text">
                         **Himu,**
                         <br><br>
@@ -65,12 +63,12 @@
             </div>
             
             <div class="letter-item">
-                <span class="click-instruction">Letter 3:</span>
+                <span class="click-instruction">Letter 3: Something Sweet</span>
                 <i class="fas fa-envelope-open-text icon-btn disabled" onclick="alertUpcoming('December 1st')"></i> 
                 <span class="status-note status-upcoming">Upcoming. Please check back on December 1st!</span>
                 
                 <div id="content3" class="hidden-content">
-                    <h3 style="color: #00796b;">Letter 3: (Locked)</h3>
+                    <h3 style="color: #00796b;">Letter 3: Something Sweet (Locked)</h3>
                     <p class="message-text">
                         **[This message is currently locked. It will be a sweet surprise waiting for you on December 1st. Please save the link and check back then!]**
                     </p>
@@ -83,9 +81,9 @@
         </div>
         
         <div class="instructions">
-            <h3 style="color: #4a148c;">Important Note for You:</h3>
+            <h3 style="color: #4a148c;">Important Note:</h3>
             <p style="color: #4a148c;">
-                 Himu Please **save this link** on your phone (in your mobile notes or a safe place). I will be uploading new content in another **5 or 6 days** (around December 1st). Please come back to this page after a few days. Thank you!
+                Please **save this link** on your phone (in your mobile notes or a safe place). I will be uploading new content in another **5 or 6 days** (around December 1st). Please come back to this page after a few days. Thank you!
             </p>
         </div>
         
@@ -99,7 +97,6 @@
             
             const targetContent = document.getElementById(contentId);
             
-            // Shomosto content hide koro/toggle koro
             const allContents = document.querySelectorAll('.hidden-content');
             allContents.forEach(content => {
                 if (content.id === contentId) {
