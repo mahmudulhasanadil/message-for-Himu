@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Messenger for You</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+</head>
+<body>
+    <div class="container">
+        
+        <div class="welcome-message">
+            <h1 style="color: #6a1b9a;">HI HIMU🤍</h1>
+            <p style="color: #4a148c;">
+                I hope you are doing well. I have been eagerly waiting for you. Thank you for making your way here! I have prepared a few messages just for you.
+            </p>
+        </div>
+
+        <div class="letter-icons">
+            <h2 style="color: #880e4f;">💌 Your Letters Await!</h2>
+            
+            <div class="letter-item">
+                <span class="click-instruction">Letter for you.Please click on the letter icon to open it</span>
+                <i class="fas fa-envelope-open-text icon-btn" onclick="showMessage(this, 'content1')"></i> 
+                <span class="status-note status-ready">Uploaded on November 25. Ready to read!</span>
+                
+                <div id="content1" class="hidden-content">
+                    <h3 style="color: #00796b;">Letter 1: All i want to say</h3>
+                    
+                    <p class="message-text">
+                        **Dear Himu,**
+                        <br><br>
+                        This is the first message I wanted to send to you through this secret page. I hope this messenger setup brought a smile to your face! I just wanted to remind you how much I appreciate having you in my life. You are truly special, and I am glad you are here reading this.
+                        <br><br>
+                        Take care, and don't forget to check the next letter when it is ready!
+                    </p>
+                    <p class="signature">
+                        Sincerely,<br>
+                        [Your Name]
+                    </p>
+                </div>
+            </div>
+            
+            <div class="letter-item">
+                <span class="click-instruction">Letter 2</span>
+                <i class="fas fa-envelope-open-text icon-btn" onclick="showMessage(this, 'content2')"></i>
+                <span class="status-note status-ready">Uploaded on November 25. Ready to read!</span>
+
+                <div id="content2" class="hidden-content">
+                    <h3 style="color: #00796b;">Letter 2:</h3>
+                    <p class="message-text">
+                        **Himu,**
+                        <br><br>
+                        Sometimes, I think about how lucky I am to know someone as wonderful as you. Life can be tough, but your presence always makes things brighter. Always remember that whatever challenges you face as a student, you have the strength and intelligence to overcome them. Keep smiling!
+                        <br><br>
+                        I hope this note brings you a bit of peace and encouragement today.
+                    </p>
+                    <p class="signature">
+                        Thinking of you,<br>
+                        [Your Name]
+                    </p>
+                </div>
+            </div>
+            
+            <div class="letter-item">
+                <span class="click-instruction">Letter 3:</span>
+                <i class="fas fa-envelope-open-text icon-btn disabled" onclick="alertUpcoming('December 1st')"></i> 
+                <span class="status-note status-upcoming">Upcoming. Please check back on December 1st!</span>
+                
+                <div id="content3" class="hidden-content">
+                    <h3 style="color: #00796b;">Letter 3: (Locked)</h3>
+                    <p class="message-text">
+                        **[This message is currently locked. It will be a sweet surprise waiting for you on December 1st. Please save the link and check back then!]**
+                    </p>
+                    <p class="signature">
+                        From your secret admirer,<br>
+                        [Your Name]
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <h3 style="color: #4a148c;">Important Note for You:</h3>
+            <p style="color: #4a148c;">
+                 Himu Please **save this link** on your phone (in your mobile notes or a safe place). I will be uploading new content in another **5 or 6 days** (around December 1st). Please come back to this page after a few days. Thank you!
+            </p>
+        </div>
+        
+    </div>
+
+    <script>
+        function showMessage(clickedIcon, contentId) {
+            if (clickedIcon.classList.contains('disabled')) {
+                return; 
+            }
+            
+            const targetContent = document.getElementById(contentId);
+            
+            // Shomosto content hide koro/toggle koro
+            const allContents = document.querySelectorAll('.hidden-content');
+            allContents.forEach(content => {
+                if (content.id === contentId) {
+                     content.style.display = content.style.display === 'block' ? 'none' : 'block';
+                } else {
+                     content.style.display = 'none';
+                }
+            });
+            
+            if (targetContent.style.display !== 'block') {
+                 targetContent.style.display = 'block';
+            }
+        }
+        
+        function alertUpcoming(date) {
+            alert("This letter is not ready yet! Please check back on " + date + ".");
+        }
+    </script>
+</body>
+</html>

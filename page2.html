@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Himu Access Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container lilac-theme">
+        
+        <h2>Himu Access Login</h2> 
+        
+        <div class="lilac-header">
+            
+(Only For Himu)
+This is intended for Himu only. So, Please Login by answering the question below to verify your identity as Himu.
+
+        </div>
+        
+        <form action="messege.html" method="GET">
+            
+            <div class="input-group-lilac">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="input-group-lilac">
+                <label for="dob">Date of birth</label>
+                <input type="text" id="dob" name="dob" required>
+            </div>
+            
+            <div class="input-group-lilac">
+                <label style="margin-bottom: 10px;">Who is the writer of the book that you received from the college's awards ceremony?</label>
+                
+                <label class="radio-writer-option">
+                    <input type="radio" name="writer" value="Kazi Nazrul Islam" required> Kazi Nazrul Islam
+                </label>
+                <label class="radio-writer-option">
+                    <input type="radio" name="writer" value="Jibanananda Das"> Jibanananda Das
+                </label>
+                <label class="radio-writer-option">
+                    <input type="radio" name="writer" value="Nirmolendo Gun"> Nirmolendo Gun
+                </label>
+            </div>
+
+            <button type="submit" class="btn-submit-pink">Submit and Login</button> 
+        </form>
+        
+    </div>
+</body>
+</html>
